@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ashu ❤️ Annu</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0f0f0f;
+color:white;
+overflow-x:hidden;
+}
+
+section{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:40px;
+text-align:center;
+}
+
+.hero{
+background:linear-gradient(135deg,#111,#1a1a1a);
+position:relative;
+}
+
+.hero h1{
+font-size:4rem;
+color:#ff4f81;
+}
+
+.hero p{
+font-size:1.2rem;
+margin-top:15px;
+}
+
+.btn{
+margin-top:30px;
+padding:15px 35px;
+background:#ff4f81;
+border:none;
+border-radius:50px;
+color:white;
+cursor:pointer;
+font-size:1rem;
+}
+
+.photo{
+width:90%;
+max-width:450px;
+border-radius:25px;
+box-shadow:0 0 30px rgba(255,79,129,.4);
+margin-bottom:25px;
+}
+
+.message{
+max-width:700px;
+line-height:1.8;
+font-size:1.1rem;
+}
+
+.timeline{
+display:flex;
+flex-direction:column;
+gap:20px;
+font-size:1.2rem;
+}
+
+.final h2{
+font-size:3rem;
+color:#ff4f81;
+}
+
+.heart{
+position:fixed;
+bottom:-20px;
+font-size:20px;
+animation:float 8s linear infinite;
+pointer-events:none;
+}
+
+@keyframes float{
+0%{
+transform:translateY(0);
+opacity:1;
+}
+100%{
+transform:translateY(-110vh);
+opacity:0;
+}
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+<h1>Ashu ❤️ Annu</h1>
+<p>A story that started on 26 August 2021</p>
+
+<a href="#first">
+<button class="btn">Begin Our Journey ✨</button>
+</a>
+</section>
+
+<section id="first">
+
+<img src="photo1.jpg" class="photo">
+
+<h2>Our Beginning ❤️</h2>
+
+<p class="message">
+Some meetings are ordinary.
+Some change your life forever.
+Ours did.
+</p>
+
+</section>
+
+<section>
+
+<h2>Our Journey ✨</h2>
+
+<div class="timeline">
+
+<div>❤️ 26 August 2021 — The Beginning</div>
+
+<div>💬 Countless Conversations</div>
+
+<div>📸 Beautiful Memories</div>
+
+<div>🌟 Still Writing Our Story</div>
+
+</div>
+
+</section>
+
+<section>
+
+<img src="photo2.jpg" class="photo">
+
+<h2>My Favorite Place ❤️</h2>
+
+<p class="message">
+In a world full of people,
+my favorite place is beside you.
+</p>
+
+</section>
+
+<section>
+
+<h2>Dear Annu 💌</h2>
+
+<p class="message">
+Since 26 August 2021, you've brought happiness into my life
+in ways words can't fully describe.
+
+Thank you for every laugh, every conversation,
+every memory and every moment we've shared.
+
+If I could choose again,
+I'd still choose you.
+
+Every single time.
+
+❤️ Ashu
+</p>
+
+</section>
+
+<section class="final">
+
+<h2>Forever & Always ❤️</h2>
+
+<p class="message">
+Out of 8 billion people,
+I'm grateful I found you.
+<br><br>
+Ashu ❤️ Annu
+</p>
+
+<button class="btn" onclick="surprise()">
+Open My Heart ❤️
+</button>
+
+</section>
+
+<script>
+
+function createHeart(){
+const heart=document.createElement("div");
+
+heart.classList.add("heart");
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+heart.style.fontSize=(Math.random()*25+10)+"px";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},8000);
+}
+
+setInterval(createHeart,300);
+
+function surprise(){
+
+for(let i=0;i<80;i++){
+setTimeout(createHeart,i*50);
+}
+
+alert("Annu ❤️ Thank you for being the most beautiful part of my life.");
+}
+
+</script>
+
+</body>
+</html>
